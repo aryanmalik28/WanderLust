@@ -1,0 +1,92 @@
+
+<style>
+    #contact-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    /* Add additional styling as needed */
+}
+
+#contact-info {
+    margin-top: 2px;
+    /* margin-bottom: 1rem; */
+}
+
+#contact-link {
+    font-size: 1rem;
+}
+
+.containered {
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding: 10px; */
+}
+
+.left-div{
+    width: 45%; 
+    padding: 10px;
+    margin-left: 30px;
+}
+.right-div {
+    width: 45%; 
+
+}
+
+
+</style>
+
+
+<!-- <footer>
+    <div class="f-info">
+        <div class="f-info-socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i> 
+        </div>
+        <div class="f-info-brand">&copy; Wanderlust Private Limited </div>
+        <div class="f-info-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+    </div>
+</footer> -->
+
+<footer>
+
+    <div class="containered f-info">
+        <div class="left-div">
+            <div class="f-info-socials">
+                <a href="https://www.linkedin.com/in/aryan-malik-12bb6b231" target="_main"> <i class="fa-brands fa-linkedin"></i> </a>
+                <a href="https://github.com/aryanmalik28" target="_main"> <i class="fa-brands fa-github"></i>  </a>
+                <a href="https://www.facebook.com/share/Dhy5XXfPbFgX29db/?mibextid=qi2Omg" target="_main"> <i class="fa-brands fa-facebook"></i>  </a>
+                <a href="https://www.instagram.com/kn0wnasmalik/?igsh=czlzemQ0d3ZtOHky" target="_main"> <i class="fa-brands fa-square-instagram"></i>  </a>
+                <a href="mailto:aryanmalik282003@gmail.com" target="_main"><i class="fa-solid fa-envelope-circle-check"></i> </a>  
+            </div>
+            <div class="f-info-brand">&copy; Wanderlust Private Limited </div>
+        </div>
+
+        <div class="right-div">
+            <a href="#" id="contact-link" onclick="showContactInfo(); return false;">
+                <p>Contact Us &nbsp;<i class="fa-solid fa-id-badge"></i></p> 
+            </a>
+            
+            <div id="contact-info" style="display: none;">
+                <a href="mailto:aryanmalik282003@gmail.com" target="_main">aryanmalik282003@gmail.com</a>
+                <p >Phone: 8445967061 </p>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+<script>
+    function showContactInfo() {
+    var contactInfo = document.getElementById('contact-info');
+    if (contactInfo.style.display === 'none') {
+        contactInfo.style.display = 'block';
+    } else {
+        contactInfo.style.display = 'none';
+    }
+}
+
+</script >
