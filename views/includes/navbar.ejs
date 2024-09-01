@@ -12,235 +12,6 @@
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-
-
-<style>
-  .btn-search{
-    background-color: #fe424d;
-    color: #fff;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem ;
-  }
-  .btn-search:hover{
-    background-color: #fe424d;
-    color: #fff;
-  }
-  .btn-search i{
-    display: inline;
-    margin-right : 0.5rem ;
-  }
-  .search-input{
-    border-radius: 25px;
-    padding: 0.5rem 3rem 0.5rem 3rem ;
-  }
-
-  #contact-info a{
-    font-size: small;
-  }
-
-  .right-div a{
-    text-decoration: none;
-    color: black;
-  }
-  /* footer  */
-  #contact-icon {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    /* Add additional styling as needed */
-}
-
-#contact-info {
-    margin-top: 2px;
-    /* margin-bottom: 1rem; */
-}
-
-#contact-link {
-    font-size: 1rem;
-}
-
-.containered {
-    display: flex;
-    /* justify-content: space-between; */
-    /* padding: 10px; */
-}
-
-.left-div{
-    width: 45%; 
-    padding: 10px;
-    margin-left: 30px;
-}
-.right-div {
-    width: 45%; 
-
-}
-
-.f-info-socials a{
-    text-decoration: none;
-}
-
-  .navbar{
-    height: 5rem;
-    background-color: white;
-}
-
-.fa-compass{
-    color: #fe424d;
-    font-size: 2rem;
-}
-
-.nav-link{
-    color: #222222 !important;
-    margin-right: 1rem ;
-    /* !important -- use to override the bootstrap styling  */
-}
-
-
-
-
-*{
-    margin: 0; padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-
-.material-symbols-outlined{
-    color: black;
-}
-
-.btn_one span {
-    color: black;
-    font-size: 30px;
-    font-weight: bolder;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    line-height: 30px;
-    
-}
-
-.sidebar_menu{
-    position: fixed;
-    left: -400px;
-    height: 100vh; width: 300px;
-    background-color: white ;
-    /* box-shadow: 0 0 8px black ; */
-}
-
-
-.sidebar_menu .menu{
-    color: black;
-    position: absolute;
-    top: 1px;
-    width: 100%;
-} 
-
-.sidebar_menu .menu li{
-    margin-top: 4px;
-    padding: 10px 20px;
-}
-
-.sidebar_menu .menu i,a{
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.sidebar_menu .menu i{
-    padding-right: 8px;
-}
-
-.sidebar_menu .social_media{
-    position: absolute;
-    left: 20% ;
-    bottom: 10%;
-}
-
-.sidebar_menu .social_media i{
-    color: black;
-    opacity: 0.5;
-    padding: 0 5px;
-}
-
-#check{
-    display: none;
-}
-
-
-/*  hover properties  */
-
-.sidebar_menu .menu li:hover{
-    box-shadow: 0 0 4px black;
-}
-
-.sidebar_menu .btn_two i:hover{
-    /* font-size: 30px; */
-    transform: scale(1.4);
-    box-shadow: 0 2px 6px red ;
-}
-
-.main_box .btn_one span:hover{
-    transform: scale(1.2);
-    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
-}
-
-.sidebar_menu .social_media i:hover{
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-#check:checked ~ .sidebar_menu{
-    /*  means jab bhi menu par click karke checkbox checked hoga tab sidebar menu left se 0-- means dhikne lag jayega  */
-
-    left: 0;
-}
-
-
-.sidebar_menu{
-    transition: all 0.3s linear;
-}
-
-
-.animation{
-    padding : 0.2rem ;
-
-}
-
-.social_media{
-    animation-name: cssanimation ;
-        animation-duration: 2s;
-        animation-timing-function: steps(0);
-        animation-delay: 0;
-        animation-iteration-count:  infinite;
-        animation-direction: normal;
-        animation-direction: reverse;
-        animation-direction: alternate;
-        animation-direction: alternate-reverse;
-}
-
-
-@keyframes per{
-    0%{
-        background-color: rgb(1, 40, 40);
-    }
-    30%{
-        background-color: rgb(169, 83, 83);
-    }
-    65%{
-        background-color: rgb(59, 59, 146);
-    }
-    100%{
-        background-color: rgb(228, 228, 124);
-    }
-}
-
-.animation{
-    animation: per 1s ease 0s infinite normal;
-}
-
-
-</style>
-
     
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top ">
   <div class="main_box">
@@ -250,7 +21,9 @@
           <!--  inserting icon 1 -->
           <span class="material-symbols-outlined">menu</span>
           </label>
-      </div><br>
+      </div>
+      <br>
+      
 
       <div class="sidebar_menu">
       <div class="menu">
@@ -258,30 +31,18 @@
          
           <ul>
             <% if(!currUser) { %> 
-              <li>
-                  <a class="nav-link " aria-current="page" href="/signup"><b>Signup</b></a>
-              </li>
-              <li>
-                  <a class="nav-link " aria-current="page" href="/login"><b>Login</b></a>
-              </li>
+              <li><a class="nav-link " aria-current="page" href="/signup"><b>Signup</b></a></li>
+              <li><a class="nav-link " aria-current="page" href="/login"><b>Login</b></a></li>
               <% } %>
-
               <% if(currUser) { %>
-              <li>
-                <a class="nav-link " aria-current="page" href="/logout"><b>Log out</b></a>
-              </li>
-                <% } %>
-
-
-              <li>
-                  <a class="nav-link " aria-current="page" href="/listings/new">Airbnb your home</a>
-              </li>
+              <li><a class="nav-link " aria-current="page" href="/logout"><b>Log out</b></a></li>
+              <% } %>
+              <li><a class="nav-link " aria-current="page" href="/listings/new">Create New </a></li>
               <li>
                   <div class="right-div">
                       <a href="#" id="contact-link" onclick="showContactInfo(); return false;">
                           <p>Contact Us</p> 
-                      </a>
-                      
+                      </a> 
                       <div id="contact-info" style="display: none;">
                           <a href="mailto:aryanmalik282003@gmail.com" target="_main">aryanmalik282003@gmail.com</a>
                           <p >Phone: 8445967061 </p>
@@ -329,24 +90,17 @@
 
       <div class="navbar-nav ms-auto ">
           <div class="navbar-nav">
-              <a class="nav-link " aria-current="page" href="/listings">Explore </a>
+              <a class="nav-link " aria-current="page" href="/listings"><b>HOME</b> </a>
             </div>
           <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
-    </button>
-    
-        
-        
+    </button>     
       </div>
 
 
     </div>
-  </div>
-
-
-
-  
+  </div> 
 </nav>
 
 
@@ -363,4 +117,55 @@
       contactInfo.style.display = 'none';
   }
 }
+</script>
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const checkBox = document.getElementById('check');
+  const sidebarMenu = document.querySelector('.sidebar_menu');
+
+
+
+  document.addEventListener('click', (e) => {
+      if (!sidebarMenu.contains(e.target) && !checkBox.contains(e.target)) {
+          checkBox.checked = false;
+      }
+  });
+
+  sidebarMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeSidebarMenu();
+  });
+});
+
+</script> -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const checkBox = document.getElementById('check');
+  const sidebarMenu = document.querySelector('.sidebar_menu');
+  const menuButton = document.querySelector('.btn_one');
+
+  const closeSidebarMenu = () => {
+        checkBox.checked = false; // Uncheck the checkbox to hide the sidebar menu
+    };
+
+  document.addEventListener('click', (e) => {
+      if (!sidebarMenu.contains(e.target) && !checkBox.contains(e.target)) {
+          checkBox.checked = false;
+          closeSidebarMenu();
+      }
+  });
+
+  sidebarMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+  });
+   menuButton.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        if(!checkBox.checked){
+          checkBox.checked ;
+        }
+    });
+});
+
 </script>

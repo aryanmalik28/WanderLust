@@ -1,16 +1,6 @@
 
 <% layout("/layouts/boilerplate") -%>
 
-  <!-- <div class="row row-cols-lg-2 mb-4 mt-6 row-cols-md-3 row-cols-sm-1 " style="display: flex; flex-wrap: wrap;">
-    <div style="flex: 1; margin: 10px;">
-      <img src="https://res.cloudinary.com/don42ypvl/image/upload/v1724959403/wanderlust_DEV/yhbsbzkul83tivisldwu" alt="listing_image" class="card-img-top " style="height: 350px; width: 100%; object-fit: cover ;" />
-    </div>
-    <div style="flex: 1; margin: 10px;">
-      <img src="https://res.cloudinary.com/don42ypvl/image/upload/v1724959403/wanderlust_DEV/yhbsbzkul83tivisldwu" alt="listing_image" class="card-img-top " style="height: 350px; width: 100%; object-fit: cover;" />
-    </div>
-  </div>
-      -->
-
       <style>
         #filters{
           margin-top: 1rem;
@@ -91,10 +81,6 @@
           <p>Farms </p>
         </div>
 
-        <div class="filter">
-          <div> <i class="fa-regular fa-snowflake"></i></div>
-          <p>Arctic </p>
-        </div>
 
         <div class="filter">
           <div> <i class="fa-solid fa-umbrella-beach"></i></div>
@@ -138,9 +124,9 @@
             <div class="card-img-overlay"></div>
             <div class="card-body">
               <p class="card-text">
-                <b><%= listing.title %></b><br>
+                <%= listing.title %><br>
         &#8377; <%= listing.price.toLocaleString("en-IN") %> 
-        <i class="tax-info"> &nbsp;&nbsp;&nbsp; <%= listing.location %> </i>
+        <span class="tax-info"> &nbsp;&nbsp;&nbsp; <%= listing.location %> </span>
               </p>
             </div>
           </div>
